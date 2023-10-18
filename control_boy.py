@@ -1,5 +1,6 @@
 from pico2d import *
 
+import game_world
 from grass import Grass
 from boy import Boy
 
@@ -36,15 +37,12 @@ def reset_world():
 
 
 def update_world():
-    for o in world:
-        o.update()
-    pass
+    game_world.update()
 
 
 def render_world():
     clear_canvas()
-    for o in world:
-        o.draw()
+    game_world.render()
     update_canvas()
 
 
